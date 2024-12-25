@@ -95,32 +95,49 @@
 <p>GitHub Pages是GitHub提供的一项功能，允许用户在GitHub上托管和发布静态网站。它的好处是不需要处理服务器和域名等繁琐的事情就能展示自己的个人博客。</p>
 <p>现在您看到的这篇文章就是基于Hexo框架在Github Pages上搭建的个人博客。下面把搭建过程记录下来，总体来说还是比较简单的。但是要记住，<strong>个人博客最重要的还是内容，形式是次要的！</strong></p>
 <hr>
-<h1 id="一-Hexo环境搭建"><a href="#一-Hexo环境搭建" class="headerlink" title="一.Hexo环境搭建"></a>一.Hexo环境搭建</h1><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">node.js</a></h3><p>安装过程略。安装完成后，运行<code>node --version</code>检查node.js版本号，如果正常显示版本号说明安装成功。</p>
-<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装<a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></h3><p>安装过程略。安装完成后，运行<code>git --version</code>检查Git版本号，如果正常显示版本号说明安装成功。</p>
-<h3 id="3-设置npm镜像源"><a href="#3-设置npm镜像源" class="headerlink" title="3.设置npm镜像源"></a>3.设置npm镜像源</h3><p><code>npm config set registry http://mirrors.cloud.tencent.com/npm/</code></p>
-<h3 id="4-使用npm安装Hexo"><a href="#4-使用npm安装Hexo" class="headerlink" title="4.使用npm安装Hexo"></a>4.使用npm安装Hexo</h3><p><code>npm install -g hexo-cli</code></p>
+<h1 id="一-Hexo环境搭建"><a href="#一-Hexo环境搭建" class="headerlink" title="一.Hexo环境搭建"></a>一.Hexo环境搭建</h1><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">node.js</a></h3><p>安装过程略。安装完成后，运行</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<p>检查node.js版本号，如果正常显示版本号说明安装成功。</p>
+<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装<a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></h3><p>安装过程略。安装完成后，运行</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>检查Git版本号，如果正常显示版本号说明安装成功。</p>
+<h3 id="3-设置npm镜像源"><a href="#3-设置npm镜像源" class="headerlink" title="3.设置npm镜像源"></a>3.设置npm镜像源</h3><p>由于一些周所周知的原因，这步不可少。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://mirrors.cloud.tencent.com/npm/</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-使用npm安装Hexo"><a href="#4-使用npm安装Hexo" class="headerlink" title="4.使用npm安装Hexo"></a>4.使用npm安装Hexo</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
 <h1 id="二-GitHub新建仓库"><a href="#二-GitHub新建仓库" class="headerlink" title="二.GitHub新建仓库"></a>二.GitHub新建仓库</h1><p>在Github上新建public仓库chenshangjin.github.io，<strong>注意这里的仓库名的第一部分必须是精确匹配Github用户名</strong>。</p>
-<h1 id="三-部署Hexo"><a href="#三-部署Hexo" class="headerlink" title="三.部署Hexo"></a>三.部署Hexo</h1><h3 id="1-新建hexo项目"><a href="#1-新建hexo项目" class="headerlink" title="1.新建hexo项目"></a>1.新建hexo项目</h3><p><code>cd blog</code></p>
-<p><code>hexo init</code></p>
-<p><code>npm install</code></p>
-<h3 id="2-新建文章"><a href="#2-新建文章" class="headerlink" title="2.新建文章"></a>2.新建文章</h3><p><code>hexo new &quot;如何用 Hexo + Github Page 搭建个人博客&quot;</code></p>
+<h1 id="三-部署Hexo"><a href="#三-部署Hexo" class="headerlink" title="三.部署Hexo"></a>三.部署Hexo</h1><h3 id="1-新建hexo项目"><a href="#1-新建hexo项目" class="headerlink" title="1.新建hexo项目"></a>1.新建hexo项目</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-新建文章"><a href="#2-新建文章" class="headerlink" title="2.新建文章"></a>2.新建文章</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;如何用 Hexo + Github Page 搭建个人博客&quot;</span><br></pre></td></tr></table></figure>
+
 <p>编辑完成后，在本地预览</p>
-<p><code>hexo s</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
 <h3 id="3-一键部署到Github-Pages"><a href="#3-一键部署到Github-Pages" class="headerlink" title="3.一键部署到Github Pages"></a>3.一键部署到Github Pages</h3><p>1.安装 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></p>
-<p><code>npm install hexo-deployer-git --save</code></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
 <p>2.在 <code>_config.yml</code> 中添加以下配置</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/chenshangjin/chenshangjin.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
 
-<p>3.执行 <code>hexo clean &amp;&amp; hexo deploy</code></p>
+<p>3.执行 </p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>4.检查Github Pages上的个人博客<a target="_blank" rel="noopener" href="https://chenshangjin.github.io/">chenshangjin.github.io</a>是否正常显示</p>
+<hr>
+<p>以上就是个人博客<a target="_blank" rel="noopener" href="https://chenshangjin.github.io/">chenshangjin.github.io</a>建站的过程，有兴趣的话您也可以一试。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cm53nvekx00005gva6makdrpp" data-title="如何用 Hexo + Github Page 搭建个人博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cm53o621e0000jsvafp562xpf" data-title="如何用 Hexo + Github Page 搭建个人博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -139,9 +156,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
