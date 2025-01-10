@@ -1,101 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>如何用 Hexo + Github Page 搭建个人博客 | 陈尚进的个人博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。 GitHub Pages是GitHub提供的一项功能，允许用户在GitHub上托管和发布静态网站。它的好处是不需要处理服务器和域名等繁琐的事情就能展示自己的个人博客。 现在您看到的这篇文章就是基于Hexo框架在Github Pages上搭建的个人博客。下面把搭建过程记录下来，总体来说还是比较简单的。但是要记住，个人博客最重要的还是内容，形式是次要的！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="如何用 Hexo + Github Page 搭建个人博客">
-<meta property="og:url" content="https://chenshangjin.github.io/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
-<meta property="og:site_name" content="陈尚进的个人博客">
-<meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。 GitHub Pages是GitHub提供的一项功能，允许用户在GitHub上托管和发布静态网站。它的好处是不需要处理服务器和域名等繁琐的事情就能展示自己的个人博客。 现在您看到的这篇文章就是基于Hexo框架在Github Pages上搭建的个人博客。下面把搭建过程记录下来，总体来说还是比较简单的。但是要记住，个人博客最重要的还是内容，形式是次要的！">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-25T09:08:26.000Z">
-<meta property="article:modified_time" content="2024-12-26T03:10:43.336Z">
-<meta property="article:author" content="陈尚进">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="blog">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="陈尚进的个人博客" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+<html lang="zh-cn">
+    <head>
+        
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <link rel='stylesheet' href="/./css/dracula.css">
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
+        <title>如何用 Hexo + Github Page 搭建个人博客</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">陈尚进的个人博客</a>
-      </h1>
-      
+    <meta name="generator" content="Hexo 7.3.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">陈尚进的个人博客</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chenshangjin.github.io"></form>
-      </div>
-    </div>
-  </div>
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-如何用-Hexo-Github-Page-搭建个人博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2024-12-25T09:08:26.000Z" itemprop="datePublished">2024-12-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      如何用 Hexo + Github Page 搭建个人博客
-    </h1>
-  
+        <div class="al_sidebar">
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Hexo 是一个快速、简洁且高效的博客框架。</p>
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>陈尚进的个人博客</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>陈尚进</h4>
+                <img class="al_sidebar_avatar" src="https://yourAvatorURL">
+                <p>在线笔记 重在实用</p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        如何用 Hexo + Github Page 搭建个人博客
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Wed December 25, 2024 05:08 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-Hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">一.Hexo环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85node-js"><span class="toc-text">1.安装node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85Git"><span class="toc-text">2.安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AEnpm%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-text">3.设置npm镜像源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BD%BF%E7%94%A8npm%E5%AE%89%E8%A3%85Hexo"><span class="toc-text">4.使用npm安装Hexo</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-GitHub%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">二.GitHub新建仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E9%83%A8%E7%BD%B2Hexo"><span class="toc-text">三.部署Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%96%B0%E5%BB%BAhexo%E9%A1%B9%E7%9B%AE"><span class="toc-text">1.新建hexo项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="toc-text">2.新建文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E5%88%B0Github-Pages"><span class="toc-text">3.一键部署到Github Pages</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <p>Hexo 是一个快速、简洁且高效的博客框架。</p>
 <p>GitHub Pages是GitHub提供的一项功能，允许用户在GitHub上托管和发布静态网站。它的好处是不需要处理服务器和域名等繁琐的事情就能展示自己的个人博客。</p>
 <p>现在您看到的这篇文章就是基于Hexo框架在Github Pages上搭建的个人博客。下面把搭建过程记录下来，总体来说还是比较简单的。但是要记住，<strong>个人博客最重要的还是内容，形式是次要的！</strong></p>
 <hr>
@@ -139,141 +139,59 @@
 <li><input disabled="" type="checkbox"> 优雅地把文章同步到Github仓库</li>
 </ul>
 
-      
+                </section>
+
+                
+                
+
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2024/12/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">计算机专业术语对照</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/">
+                    
+                </a>
+            </nav>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://chenshangjin.github.io/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cm5qi0apx0001akva5b7tfxty" data-title="如何用 Hexo + Github Page 搭建个人博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
 
-    </footer>
-  </div>
-  
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        陈尚进
+    </div>
+
     
-<nav id="article-nav">
-  
-    <a href="/2024/12/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          计算机专业术语对照
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" rel="tag">音视频</a></li></ul>
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
     </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 10px;">资源</a> <a href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" style="font-size: 10px;">音视频</a>
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
     </div>
-  </div>
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
         
-          <li>
-            <a href="/2025/01/10/ZLM%E8%A7%86%E9%A2%91%E5%BD%95%E5%88%B6%E5%9B%9E%E7%9C%8B%E6%96%B9%E6%A1%88/">ZLM视频录制回看方案</a>
-          </li>
         
-          <li>
-            <a href="/2024/12/30/%E9%9F%B3%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/">音视频网站资源</a>
-          </li>
         
-          <li>
-            <a href="/2024/12/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7/">计算机专业术语对照</a>
-          </li>
         
-          <li>
-            <a href="/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何用 Hexo + Github Page 搭建个人博客</a>
-          </li>
         
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 陈尚进<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
+    </body>
 </html>
