@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ZLM视频录制回看方案 | 陈尚进的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="问题描述：ZLM 视频存储 MP4 文件时，只有当 MP4 文件录制完成后，才能播放。但是正在录制的文件，无法播放。所以导致近期正在录制的视频无法回看，不满足现场需求。 问题分析：MP4 文件格式不太适合一边录制一边点播，因为 MP4 文件需要在录制完成后进行封装和索引才能被播放器正确播放。 基于 ZLM 的三种解决思路：1.设置录制 MP4 的切片时间大小，使其处于用户可以容忍的范围，比如 10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZLM视频录制回看方案">
+<meta property="og:url" content="https://chenshangjin.github.io/2025/01/10/ZLM%E8%A7%86%E9%A2%91%E5%BD%95%E5%88%B6%E5%9B%9E%E7%9C%8B%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="陈尚进的个人博客">
+<meta property="og:description" content="问题描述：ZLM 视频存储 MP4 文件时，只有当 MP4 文件录制完成后，才能播放。但是正在录制的文件，无法播放。所以导致近期正在录制的视频无法回看，不满足现场需求。 问题分析：MP4 文件格式不太适合一边录制一边点播，因为 MP4 文件需要在录制完成后进行封装和索引才能被播放器正确播放。 基于 ZLM 的三种解决思路：1.设置录制 MP4 的切片时间大小，使其处于用户可以容忍的范围，比如 10">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-10T08:29:06.000Z">
+<meta property="article:modified_time" content="2025-01-10T08:30:26.001Z">
+<meta property="article:author" content="陈尚进">
+<meta property="article:tag" content="音视频">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="陈尚进的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">陈尚进的个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chenshangjin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ZLM视频录制回看方案" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/10/ZLM%E8%A7%86%E9%A2%91%E5%BD%95%E5%88%B6%E5%9B%9E%E7%9C%8B%E6%96%B9%E6%A1%88/" class="article-date">
+  <time class="dt-published" datetime="2025-01-10T08:29:06.000Z" itemprop="datePublished">2025-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ZLM视频录制回看方案
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>ZLM 视频存储 MP4 文件时，只有当 MP4 文件录制完成后，才能播放。但是正在录制的文件，无法播放。<br>所以导致近期正在录制的视频无法回看，不满足现场需求。</p>
+<h2 id="问题分析："><a href="#问题分析：" class="headerlink" title="问题分析："></a>问题分析：</h2><p>MP4 文件格式不太适合一边录制一边点播，因为 MP4 文件需要在录制完成后进行封装和索引才能被播放器正确播放。</p>
+<h2 id="基于-ZLM-的三种解决思路："><a href="#基于-ZLM-的三种解决思路：" class="headerlink" title="基于 ZLM 的三种解决思路："></a>基于 ZLM 的三种解决思路：</h2><p>1.设置录制 MP4 的切片时间大小，使其处于用户可以容忍的范围，比如 10 秒。对于碎片化的 MP4 文件，可以定期合并处理。</p>
+<p>2.尝试修改 ZLM ，在存储 MP4 文件时，实时封装，使文件一直处于可播放的状态。问题：1.需要了解 MP4 封装逻辑分析该思路是否可行 2.性能可能需要优化 3. 需要解决文件读写冲突</p>
+<p>3.尝试录制其他格式的视频，目前已知 ZLM 还支持 hls 与 hls_fmp4 的录制，但录制保存的文件时长很短，需要修改。</p>
+<p>从合理性上讲，更倾向于采用<strong>第三种</strong>方案，以下是具体细节：</p>
+<h2 id="hls-录制具体实现："><a href="#hls-录制具体实现：" class="headerlink" title="hls 录制具体实现："></a>hls 录制具体实现：</h2><p>以下是 ZLM 对 hls 录制的配置说明：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[hls]</span></span><br><span class="line"><span class="comment">#hls写文件的buf大小，调整参数可以提高文件io性能</span></span><br><span class="line"><span class="attr">fileBufSize</span>=<span class="number">65536</span></span><br><span class="line"><span class="comment">#hls最大切片时间</span></span><br><span class="line"><span class="attr">segDur</span>=<span class="number">2</span></span><br><span class="line"><span class="comment">#m3u8索引中,hls保留切片个数(实际保留切片个数+segRetain个)</span></span><br><span class="line"><span class="comment">#如果设置为0，则不删除切片且m3u8文件全量记录切片列表</span></span><br><span class="line"><span class="attr">segNum</span>=<span class="number">3</span></span><br><span class="line"><span class="comment">#HLS切片延迟个数，大于0将生成hls_delay.m3u8文件，0则不生成</span></span><br><span class="line"><span class="attr">segDelay</span>=<span class="number">0</span></span><br><span class="line"><span class="comment">#HLS切片从m3u8文件中移除后，继续保留在磁盘上的个数</span></span><br><span class="line"><span class="attr">segRetain</span>=<span class="number">5</span></span><br><span class="line"><span class="comment">#是否广播 hls切片(ts/fmp4)完成通知(on_record_ts)</span></span><br><span class="line"><span class="attr">broadcastRecordTs</span>=<span class="number">0</span></span><br><span class="line"><span class="comment">#直播hls文件删除延时，单位秒，issue: #913</span></span><br><span class="line"><span class="attr">deleteDelaySec</span>=<span class="number">10</span></span><br><span class="line"><span class="comment">#此选项开启后m3u8文件还是表现为直播，但是切片文件会被全部保留为点播用</span></span><br><span class="line"><span class="comment">#segDur设置为0或segKeep设置为1的情况下，每个切片文件夹下会生成一个vod.m3u8文件用于点播该时间段的录像</span></span><br><span class="line"><span class="attr">segKeep</span>=<span class="number">0</span></span><br><span class="line"><span class="comment">#如果设置为1，则第一个切片长度强制设置为1个GOP。当GOP小于segDur，可以提高首屏速度</span></span><br><span class="line"><span class="attr">fastRegister</span>=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>根据 ZLM 提供的 hls 录制的能力，通过修改配置达到现场实际需求，具体实现以下功能：</p>
+<p>1.不间断录制视频，按 <code>&#123;应用名&#125;/&#123;流id&#125;/&#123;yyyy-MM-dd&#125;/&#123;hh&#125;/&#123;mm-ss-序号&#125;.ts</code> 命名规则保存切片文件</p>
+<p>2.每小时整点在一个切片文件夹生成一个 <strong><code>vod.m3u8</code></strong> 文件，用于点播该时间段的录像</p>
+<p>3.在 <code>&#123;应用名&#125;/&#123;流id&#125;</code> 目录下生成 <strong><code>hls.m3u8</code></strong> ，保留一小时内的切片，用于当前时间一小时内的录像点播</p>
+<p>文件结构：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">├───live(应用名)</span><br><span class="line">│   └───test(流id)</span><br><span class="line">│       │   hls.m3u8</span><br><span class="line">│       │   </span><br><span class="line">│       └───<span class="number">2025</span>-<span class="number">01</span>-<span class="number">10</span></span><br><span class="line">│           ├───<span class="number">10</span></span><br><span class="line">│           │       <span class="number">55</span>-<span class="number">13</span>_0.ts</span><br><span class="line">│           │       xx-xx_x.ts ..</span><br><span class="line">│           │       vod.m3u8</span><br><span class="line">│           │       </span><br><span class="line">│           ├───<span class="number">11</span></span><br><span class="line">│           │       <span class="number">00</span>-<span class="number">01</span>_144.ts</span><br><span class="line">│           │       xx-xx_xxx.ts ..</span><br><span class="line">│                   (当前文件夹未完成时，不生成vod.m3u8)</span><br></pre></td></tr></table></figure>
+
+<p>以下是需要修改的配置：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[hls]</span></span><br><span class="line"><span class="comment">#m3u8索引中,hls保留切片个数1800，每个切片录像时长2秒，所以可以保留一小时内的切片</span></span><br><span class="line"><span class="attr">segNum</span>=<span class="number">1800</span></span><br><span class="line"><span class="comment">#此选项开启后m3u8文件还是表现为直播，但是切片文件会被全部保留为点播用</span></span><br><span class="line"><span class="comment">#segDur设置为0或segKeep设置为1的情况下，每个切片文件夹下会生成一个vod.m3u8文件用于点播该时间段的录像</span></span><br><span class="line"><span class="attr">segKeep</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>配置文件修改后，启动 <code>MediaServer</code> ，分别调用 <code>addStreamProxy</code>  <code>startRecord</code> 进行拉流和录制：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;ZLMediaKit_URL&#125;&#125;/index/api/addStreamProxy?secret=&#123;&#123;ZLMediaKit_secret&#125;&#125;&amp;vhost=&#123;&#123;defaultVhost&#125;&#125;&amp;app=live&amp;stream=test&amp;url=rtsp://admin:111111hk@192.168.20.195:554/cam/realmonitor?channel=1%26subtype=0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;ZLMediaKit_URL&#125;&#125;/index/api/startRecord?secret=&#123;&#123;ZLMediaKit_secret&#125;&#125;&amp;type=0&amp;vhost=&#123;&#123;defaultVhost&#125;&#125;&amp;app=live&amp;stream=test</span><br></pre></td></tr></table></figure>
+
+<p>当客户端请求点播时，分两种处理：</p>
+<p>1.点播时间早于当前时间一小时的，取录像文件夹中对应时间段的 <code>vod.m3u8</code> 路径，作为播放地址，如：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/live/test/2025-01-10/10/vod.m3u8</span><br></pre></td></tr></table></figure>
+
+<p>进度条的起始时间是整点，终结时间是下个整点（可能会出现查看录像跨时间段，需要在播放完毕后再次请求下个时间段的播放地址）；</p>
+<p>2.点播时间在当前时间一小时内的，需要将当前时刻的 <code>hls.m3u8</code> 另存一份（如 <code>hls.202501101259.m3u8</code> 。因为 <code>hls.m3u8</code> 录制过程中动态变化，直接使用会导致播放进度不稳定），作为播放地址，如：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/live/test/hls.202501101259.m3u8</span><br></pre></td></tr></table></figure>
+
+<p>进度条的起始时间是当前时间减一小时。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chenshangjin.github.io/2025/01/10/ZLM%E8%A7%86%E9%A2%91%E5%BD%95%E5%88%B6%E5%9B%9E%E7%9C%8B%E6%96%B9%E6%A1%88/" data-id="cm5qi0apu0000akvae79y0xqm" data-title="ZLM视频录制回看方案" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" rel="tag">音视频</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/12/30/%E9%9F%B3%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">音视频网站资源</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" rel="tag">音视频</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 10px;">资源</a> <a href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/" style="font-size: 10px;">音视频</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/10/ZLM%E8%A7%86%E9%A2%91%E5%BD%95%E5%88%B6%E5%9B%9E%E7%9C%8B%E6%96%B9%E6%A1%88/">ZLM视频录制回看方案</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/30/%E9%9F%B3%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99%E8%B5%84%E6%BA%90/">音视频网站资源</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7/">计算机专业术语对照</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/25/%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-Github-Page-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何用 Hexo + Github Page 搭建个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 陈尚进<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
